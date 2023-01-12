@@ -1,0 +1,45 @@
+.header {
+    background: #bfb5f7;
+    padding: 10px 0px;
+    color: black;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .header__left
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    // .header__img
+    &__img {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 8px;
+        background-color: slateblue;
+    }
+
+    // .header__text
+    &__text {
+    }
+
+    // .header__right
+    &__right {
+    }
+
+    // .header__ul
+    &__ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    // .header__li
+    &__li {
+    }
+}

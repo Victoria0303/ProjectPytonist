@@ -1,0 +1,109 @@
+.main {
+    flex-grow: 1;
+    display: flex;
+}
+
+.left-menu {
+    padding: 10px 50px;
+
+    // .left-menu__title
+    &__title {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    // .left-menu__ul
+    &__ul {
+        color: #ccc;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    // .left-menu__li
+    &__li {
+        // position: relative;
+        white-space: nowrap;
+        transition: all 0.3s ease 0s;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+
+        a {
+            background-color: #898686;
+            border-radius: 6px;
+            padding: 10px 20px;
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                border-radius: 6px;
+                top: 0;
+                content: "";
+                width: 100%;
+                background-color: #5c5757;
+                height: 100%;
+                z-index: -1;
+                transform: translateY(6px);
+            }
+
+            &:hover {
+                background-color: #fff;
+                color: #333;
+            }
+        }
+    }
+}
+
+.right {
+    flex-grow: 1;
+    overflow: auto;
+    max-height: 100%;
+    background: radial-gradient(
+        circle,
+        rgba(63, 94, 251, 1) 0%,
+        rgba(252, 70, 107, 1) 100%
+    );
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+
+    &__title {
+        text-align: center;
+    }
+}
+
+.li-right {
+    display: flex;
+    margin-bottom: 50px;
+    gap: 50px;
+
+    // .li-right__text
+    &__text {
+        margin-bottom: 10px;
+        flex-basis: 50%;
+    }
+
+    &__img {
+        flex-basis: 50%;
+    }
+
+    // .li-right__img
+    &__img img {
+        max-height: 600px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    &__p {
+        margin-bottom: 15px;
+    }
+}
+
+.reversed .li-right__img {
+    order: 1;
+}
